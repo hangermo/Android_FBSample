@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloSample</string>
+    <!-- app_id在developers.facebook.com註冊APP時自動產生 -->
+	<string name="app_id">698316763572251</string>
+	<string name="get_started">快使用FaceBook登入吧！</string>
+	<string name="skip_login">Continue as a guest</string>
+	<string name="settings">Settings</string>
+</resources>
