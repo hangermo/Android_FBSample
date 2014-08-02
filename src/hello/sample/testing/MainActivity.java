@@ -135,7 +135,7 @@ public class MainActivity extends FragmentActivity {
 			for (int i = 0; i < backStackSize; i++) {
 				manager.popBackStack();
 			}
-			if (state.equals(SessionState.OPENED)) {
+			if (state.isOpened()) {
 				showFragment(LOGIN, false);
 			} else if (state.isClosed()) {
 				showFragment(NOTLOGIN, false);
@@ -143,7 +143,7 @@ public class MainActivity extends FragmentActivity {
 		}
 	}
 	//自定義此方法，負責顯示要求的某個 fragment 並且將其他的 fragments 隱藏
-	void showFragment(int fragmentIndex, boolean addToBackStack) {
+	private void showFragment(int fragmentIndex, boolean addToBackStack) {
 		FragmentManager fm = getSupportFragmentManager();
 		FragmentTransaction transaction = fm.beginTransaction();
 		for (int i = 0; i < fragments.length; i++) {
